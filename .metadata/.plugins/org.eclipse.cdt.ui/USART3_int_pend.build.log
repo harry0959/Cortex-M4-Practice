@@ -1,0 +1,27 @@
+14:12:17 **** Incremental Build of configuration Debug for project USART3_int_pend ****
+make -j24 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:22:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   22 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:31:28: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from 'long unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   31 |         uint32_t *pISER1 = (uint32_t)0XE000E104;
+      |                            ^
+../Src/main.c:35:28: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from 'long unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   35 |         uint32_t *pISPR1 = (uint32_t)0XE000E204;
+      |                            ^
+arm-none-eabi-gcc -o "USART3_int_pend.elf" @"objects.list"   -mcpu=cortex-m4 -T"G:\STM32\ComtexM4\USART3_int_pend\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USART3_int_pend.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: USART3_int_pend.elf
+ 
+arm-none-eabi-size  USART3_int_pend.elf 
+arm-none-eabi-objdump -h -S USART3_int_pend.elf  > "USART3_int_pend.list"
+   text	   data	    bss	    dec	    hex	filename
+   3448	    100	   1900	   5448	   1548	USART3_int_pend.elf
+Finished building: default.size.stdout
+ 
+Finished building: USART3_int_pend.list
+ 
+
+14:12:18 Build Finished. 0 errors, 3 warnings. (took 291ms)
+
