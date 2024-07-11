@@ -14,3 +14,5 @@ Bare metal embedded build process
 Processor fault exceptions and fault handler implementation and fault analysis  
 Stack and AAPCS standard  
 learn inline assembly , naked functions and gcc variable and section attributes
+
+主要筆記由notion紀錄
