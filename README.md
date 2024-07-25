@@ -1,6 +1,6 @@
 Cortex M3/M4練習
 
-學習內容大綱  
+內容 
 Internal architecture of ARM Cortex M3/M4 processor and programming  
 Learn Mixed ‘C’ and Assembly Coding using inline assembly technique  
 Demystifying Memory, Bus interfaces, NVIC, Exception handling with lots of animation  
